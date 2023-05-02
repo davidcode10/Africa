@@ -33,29 +33,12 @@ struct MapView: View {
     // MARK: - BODY
     
     var body: some View {
-        // MARK: - No1 BASIC MAP
-        //Map(coordinateRegion: $region)
-        
-        // MARK: - No2 ADVANCED MAP
+        // MARK: - ADVANCED MAP
         Map(
             coordinateRegion: $region,
             annotationItems: locations
         ) { item in
-            // (A) MARKER: NEW STYLE (always static)
-            /*
-             MapMarker(
-             coordinate: item.location,
-             tint: .accentColor
-             )
-             */
-            //MapAnnotation(coordinate: item.location) {
-            //    Image("logo")
-            //        .resizable()
-            //        .scaledToFit()
-            //        .frame(width: 32, height: 32, alignment: .center)
-            //} //: ANNOTATION
-            
-            // (B) CUSTOM ADVANCED ANNOTATION (it could be interactive)
+            // CUSTOM ADVANCED ANNOTATION (it could be interactive)
             MapAnnotation(coordinate: item.location) {
                 MapAnnotationView(location: item)
             }

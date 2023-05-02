@@ -23,18 +23,16 @@ struct VideoPlayerView: View {
                     filename: videoSelected,
                     fileFormat: "mp4"
                 )
-            ) {
-                //Text(videoTitle)
-            }
-            .overlay(
-                Image("logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 32, height: 32)
-                    .padding(.top, 6)
-                    .padding(.horizontal, 8)
-                , alignment: .topLeading
-            )
+            ) {}
+                .overlay(
+                    Image("logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 32, height: 32)
+                        .padding(.top, 6)
+                        .padding(.horizontal, 8)
+                    , alignment: .topLeading
+                )
         } //: VSTACK
         .tint(.accentColor)
         .navigationTitle(videoTitle)

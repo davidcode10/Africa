@@ -16,18 +16,7 @@ struct GalleryView: View {
     let animals: [Animal] = Bundle.main.decode("animals.json")
     let haptics = UIImpactFeedbackGenerator(style: .medium)
     
-    // SIMPLE GRID DEFINITION
-    //let gridLayout: [GridItem] = [
-    //    GridItem(.flexible()),
-    //    GridItem(.flexible()),
-    //    GridItem(.flexible())
-    //]
-    
-    // EFFICIENT GRID DEFINITION
-    // let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible()), count: 3)
-    
     // DYNAMIC GRID LAYOUT
-    
     @State private var gridLayout: [GridItem] = [GridItem(.flexible())]
     @State private var gridColumn: Double = 3
     
